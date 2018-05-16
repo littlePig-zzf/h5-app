@@ -6,6 +6,10 @@ import { AlertPlugin,LoadingPlugin,ToastPlugin  } from 'vux'
 
 import Vue from 'vue'
 
+import { WechatPlugin } from 'vux'
+
+Vue.use( WechatPlugin )
+
 Vue.use( AlertPlugin )
 Vue.use( LoadingPlugin )
 Vue.use( ToastPlugin )
@@ -15,13 +19,15 @@ import api from './request/api'
 import App from './App'
 import router from './router'
 
+console.log(Vue.wechat)
+
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
 
 Vue.config.productionTip = false
 
 Vue.prototype.$http = axios
-Vue.prototype.$api = api
+// Vue.prototype.$Api = Api
 
 /* eslint-disable no-new */
 new Vue({
