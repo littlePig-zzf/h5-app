@@ -19,7 +19,9 @@ import api from './request/api'
 import App from './App'
 import router from './router'
 import './assets/css/transition.less'
+import GlobalComponents from './components/GlobalComponent.js'
 
+Vue.use( GlobalComponents )
 // console.log(Vue.wechat)
 
 const FastClick = require('fastclick')

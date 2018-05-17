@@ -1,5 +1,9 @@
 import axios from 'axios';
 import { SERVER_URL } from './api';
+
+// import  { ToastPlugin } from 'vux';
+
+// Vue.use(ToastPlugin);
 // import { Storage } from 'commons/js/utils';
 // import router from "../router";
 

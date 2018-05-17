@@ -13,12 +13,12 @@ export default new Router({
 		{
 			path: '/',
 		    name: 'index',
-		    component: resolve => routerFun(resolve,'index')
+		    component: resolve => routerFun(resolve, 'index')
 		},
 		{
 			path: '/LineChart',
 		    name: 'charts/LineChart',
-		    component: resolve => routerFun(resolve,'charts/LineChart')
+		    component: resolve => routerFun(resolve, 'charts/LineChart')
 		}
 	]
 })
