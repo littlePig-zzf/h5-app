@@ -2,7 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 
-const index = resolve => require(['@/views/index'], resolve)
+export function routerFun(resolve, file){
+	require(['@/views/' + file], resolve)
+}
+
 
 Vue.use(Router)
 export default new Router({
@@ -10,7 +13,12 @@ export default new Router({
 		{
 			path: '/',
 		    name: 'index',
-		    component: index
+		    component: resolve => routerFun(resolve,'index')
+		},
+		{
+			path: '/LineChart',
+		    name: 'charts/LineChart',
+		    component: resolve => routerFun(resolve,'charts/LineChart')
 		}
 	]
 })

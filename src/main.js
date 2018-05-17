@@ -18,8 +18,9 @@ import axios from './request/axios'
 import api from './request/api'
 import App from './App'
 import router from './router'
+import './assets/css/transition.less'
 
-console.log(Vue.wechat)
+// console.log(Vue.wechat)
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)

@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+  	<transition name="fade" mode="out-in">
+    	<router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -13,6 +15,6 @@ export default {
 
 <style lang="less">
 
-
+@import './assets/css/base.less';
 @import '~vux/src/styles/reset.less';
 </style>

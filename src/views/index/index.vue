@@ -1,22 +1,16 @@
 <template>
-	<div>
-		<grid>
-		  <grid-item label="Grid" v-for="i in 5" :key="i">
-		    s
-		  </grid-item>
-		</grid>
-		<XButton type="primary">asas</XButton>
+	<div class="page">
+		<div class="content"></div>
+    <foot-tool-bar></foot-tool-bar>
 	</div>
 </template>
 
 <script type="text/javascript">
-import { Grid, GridItem, XButton } from 'vux'
 import wxConfig from '@/assets/js/wxConfig'
+import FootToolBar from '@/components/FootToolBar'
 export default {
   components: {
-    Grid,
-    GridItem,
-    XButton
+    FootToolBar
   },
   data() {
   	return {
@@ -24,12 +18,23 @@ export default {
   	}
   },
   mounted() {
-  	this.init();
+  	// this.init();
   },
   methods: {
-  	init() {
-  		wxConfig();
+  	// init() {
+  	// 	wxConfig();
+  	// },
+  	seeChart() {
+  		this.$router.push({path: '/LineChart'})
   	}
   }
 }
 </script>
+
+<style lang="less">
+.page {
+  .weui-tabbar {
+    position: fixed;
+  }
+}
+</style>
