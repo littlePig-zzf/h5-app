@@ -1,12 +1,18 @@
 
-const API_FULL = 'http://tsc.xlbzone.com'; // 测试服
+const API_FULL = 'https://api.myjson.com/bins/'; // 测试服
 // const API_FULL = 'http://c.xiulianzone.com'; // 正式服
-
+// https://api.myjson.com/bins/pvwou
 export const SERVER_URL = API_FULL;
 
 export const GET_IMG = API_FULL + '/api/getfile/img?id=';
 
 export const api = {
+    common: {
+        index: {
+            type: 'get',
+            url: API_FULL + 'pvwou'
+        }
+    },
     storeDetail: {
         detail: {
             type: 'get',

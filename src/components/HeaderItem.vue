@@ -1,9 +1,9 @@
 <template>
 	<div>
-		<x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">with more menu</x-header>
+		<x-header :left-options="{showBack: showBack}" :right-options="{showMore: true}" @on-click-more="showMenus = true">with more menu</x-header>
 		<div v-transfer-dom>
-	      <actionsheet :menus="menus" v-model="showMenus" show-cancel></actionsheet>
-	    </div>
+      <actionsheet :menus="menus" v-model="showMenus" show-cancel></actionsheet>
+    </div>
 	</div>
 </template>
 
@@ -11,7 +11,13 @@
 import { XHeader, Actionsheet, TransferDom, ButtonTab, ButtonTabItem } from 'vux'
 
 export default {
-  name: 'GoBack',
+  name: 'HeaderItem',
+  props: {
+    showBack: {
+      type: Boolean,
+      default: true
+    }
+  },
   directives: {
     TransferDom
   },

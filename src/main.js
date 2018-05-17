@@ -6,8 +6,8 @@ import Vue from 'vue'
 import { AlertPlugin,LoadingPlugin,ToastPlugin  } from 'vux'
 import { WechatPlugin } from 'vux'
 
-import axios from './request/axios'
-import api from './request/api'
+import axios from './request'
+import { api } from './request/api.js'
 import App from './App'
 import router from './router'
 import './assets/css/transition.less'
@@ -27,7 +27,7 @@ FastClick.attach(document.body)
 Vue.config.productionTip = false
 
 Vue.prototype.$http = axios
-// Vue.prototype.$Api = Api
+Vue.prototype.$api = api
 
 /* eslint-disable no-new */
 new Vue({

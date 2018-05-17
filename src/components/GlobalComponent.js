@@ -1,5 +1,5 @@
 
-import GoBack from './GoBack'
+import HeaderItem from './HeaderItem'
 export default (Vue) => {
-	Vue.component('go-back', GoBack)
+	Vue.component('header-item', HeaderItem)
 } 

@@ -13,7 +13,6 @@ let https = {
     },
 	get(url, params = {}, success, error) {
         if(params) params._ = Date.parse(new Date());  //设置请求不缓存
-
 		axios.get(url, { params: params }).then( res => {
 			if(success) success(res.data)
 		}).catch( err => {
@@ -32,7 +31,7 @@ let https = {
 }
 
 //错误回调函数
-export default function errorf(error, type){
+function errorf(error, type){
         //断网提示
         if(error == 'Error: Network Error'){    
             bus.$vux.toast.show({
@@ -79,7 +78,7 @@ export default function errorf(error, type){
     }
 
 //重新获取token
-export default function getToken(type){
+function getToken(type){
     https.get('获取token', {}, function(data){
         if(data.code == 200) {
             console.log('已静默获取token');
@@ -114,14 +113,5 @@ export default function(){
         success = arguments[2];
         failure = arguments[3];
     }
-
-    let keys = which.split('.');
-    let obj = null;
-    if(keys.length === 1){
-        obj = api[keys[0]];
-    }else{
-        obj = api[keys[0]][keys[1]];
-    }
-
-	https[obj.type](obj.url, params, success, failure);
+	https[which.type](which.url, params, success, failure);
 };

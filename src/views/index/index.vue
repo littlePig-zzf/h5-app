@@ -1,7 +1,8 @@
 <template>
 	<div class="page">
+    <header-item :showBack="false"></header-item>
 		<div class="content">
-        <p>i am index</p> 
+        <h5>i am {{name}}</h5> 
     </div>
 	</div>
 </template>
@@ -10,19 +11,24 @@
 import wxConfig from '@/assets/js/wxConfig'
 export default {
   components: {
+
   },
   data() {
   	return {
-
+      name: ''
   	}
   },
   mounted() {
-  	// this.init();
+  	this.init();
   },
   methods: {
-  	// init() {
-  	// 	wxConfig();
-  	// },
+  	init() {
+  		// wxConfig();
+      this.$http(this.$api.common.index, (res)=>{
+        console.log(res.data)
+        this.name = res.data[0].name
+      })
+  	},
   	seeChart() {
   		this.$router.push({path: '/LineChart'})
   	}

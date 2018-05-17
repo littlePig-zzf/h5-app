@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<go-back></go-back>
+		<header-item></header-item>
 	    <v-chart :data="data">
 	      <v-line series-field="type" />
 	    </v-chart>
@@ -9,14 +9,14 @@
 
 <script type="text/javascript">
 import { VChart, VLine, VAxis, VTooltip } from 'vux'
-import GoBack from '@/components/GoBack'
+// import HeaderItem from '@/components/HeaderItem'
 export default {
 	components: {
 	    VChart,
 	    VLine,
 	    VAxis,
 	    VTooltip,
-	    GoBack
+	    // Header
 	},
 	data () {
 	    return {

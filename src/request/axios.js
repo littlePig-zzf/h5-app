@@ -13,6 +13,7 @@ axios.defaults.timeout = 0;//不设置超时时长
 
 // http请求拦截器
 axios.interceptors.request.use(config => {
+    config.headers.Authorization = '4c588f1f2947d61abf907465cf11dc6c15f0a861b70a424999741c8613f010db';
     return config;
 }, error => {
     bus.$vux.toast.show({
