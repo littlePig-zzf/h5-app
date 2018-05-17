@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { SERVER_URL } from './api';
+import bus from '../assets/js/bus'
 
 // import  { ToastPlugin } from 'vux';
 
@@ -12,12 +13,15 @@ axios.defaults.timeout = 0;//不设置超时时长
 
 // http请求拦截器
 axios.interceptors.request.use(config => {
-    // 判断是否存在token，如果存在的话，则每个http header都加上toke
-    // let token = Storage.getItem('G_TOKEN');
-    // config.headers.Authorization = '9e8a5cec41cf3442a5534c555a9e474d54f738aab69e18c19be943dc3d2456f7';
-    // if (token) config.headers.Authorization = token;
     return config;
 }, error => {
+    bus.$vux.toast.show({
+        type: 'text',
+        text: '网络出错',
+        position: 'middle',
+        width: '60%',
+        isShowMask: true
+    })
     return Promise.reject(error);
 });
 
