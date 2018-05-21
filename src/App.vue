@@ -3,7 +3,9 @@
   	<transition name="fade" mode="out-in">
   		<net-work-error v-if="!routeState"></net-work-error>
   		<div v-else>
-    		<router-view></router-view>
+    		<keep-alive :exclude="excludeJson">
+          <router-view></router-view>  
+        </keep-alive>
     		<foot-tool-bar></foot-tool-bar>
   		</div>
     </transition>
@@ -21,7 +23,8 @@ export default {
   	},
   	data() {
   		return {
-  		routeState: true	//是否联网状态
+  		  routeState: true,	//是否联网状态
+        excludeJson: ["LineChart"]  //设置不需要缓存的页面
   		}
   	},
  	watch: {

@@ -11,6 +11,7 @@
 import { VChart, VLine, VAxis, VTooltip } from 'vux'
 // import HeaderItem from '@/components/HeaderItem'
 export default {
+	name: 'LineChart',
 	components: {
 	    VChart,
 	    VLine,

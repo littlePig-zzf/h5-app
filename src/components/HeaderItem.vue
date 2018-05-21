@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<x-header :left-options="{showBack: showBack}" :right-options="{showMore: true}" @on-click-more="showMenus = true">with more menu</x-header>
+		<x-header :left-options="{showBack: showBack}" :right-options="{showMore: showMore}" @on-click-more="showMenus = true">with more menu</x-header>
 		<div v-transfer-dom>
       <actionsheet :menus="menus" v-model="showMenus" show-cancel></actionsheet>
     </div>
@@ -14,6 +14,10 @@ export default {
   name: 'HeaderItem',
   props: {
     showBack: {
+      type: Boolean,
+      default: true
+    },
+    showMore: {
       type: Boolean,
       default: true
     }
