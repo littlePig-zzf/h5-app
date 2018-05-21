@@ -39,6 +39,8 @@ export default {
       },
       showMenus: false
     }
+  },
+  methods: {
   }
 }
 </script>

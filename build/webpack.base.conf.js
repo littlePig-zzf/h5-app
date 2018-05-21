@@ -82,6 +82,7 @@ let webpackConfig = {
   }
 }
 
+// 设置全局变量以及vux样式的修改
 let lessTheme = {
   name: 'less-theme',
   path: path.resolve(__dirname, '../src/assets/css/theme.less')

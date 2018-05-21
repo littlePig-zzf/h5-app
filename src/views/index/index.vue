@@ -39,3 +39,15 @@ export default {
   }
 }
 </script>
+
+
+<style type="text/css" lang="less">
+// @import '../../assets/css/base.less'; //引入类似mixin
+// .content {
+//   h5 {
+    // height: @boxHeight;
+    // border: 1px solid #eee;
+    // .radius(5px)
+  // }
+// }
+</style>
