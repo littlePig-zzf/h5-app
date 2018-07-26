@@ -2,7 +2,7 @@
 	<div class="page">
     <header-item :showBack="false" :showMore="false"></header-item>
 		<div class="content">
-        <h5>hello,i am {{name}}</h5> 
+        <h5>hello,i am {{name}}</h5>
         <div @click="seeChart">你好吗？？</div>
     </div>
 	</div>
@@ -42,12 +42,13 @@ export default {
 
 
 <style type="text/css" lang="less">
-// @import '../../assets/css/base.less'; //引入类似mixin
-// .content {
-//   h5 {
+@import '../../assets/css/base.less'; //引入类似mixin
+.content {
+  font-size: 0.16rem
+  // h5 {
     // height: @boxHeight;
     // border: 1px solid #eee;
     // .radius(5px)
   // }
-// }
+}
 </style>

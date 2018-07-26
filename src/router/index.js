@@ -1,23 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-export function routerFun(resolve, file){
-	require(['@/views/' + file], resolve)
-}
-
-
 Vue.use(Router)
-let router = new Router({
+
+const view = (file) => () => import(`@/views/${file}.vue`)
+
+const router = new Router({
 	routes: [
 		{
 			path: '/',
 		    name: 'index',
-		    component: resolve => routerFun(resolve, 'index')
+		    component: view('index/index')
 		},
 		{
 			path: '/LineChart',
 		    name: 'charts/LineChart',
-		    component: resolve => routerFun(resolve, 'charts/LineChart')
+		    component: view('charts/LineChart')
 		}
 	]
 })
