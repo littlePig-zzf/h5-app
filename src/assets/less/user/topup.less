@@ -1,0 +1,100 @@
+.topup {
+  background: #fff;
+  .content {
+    padding: 0 0.3rem;
+    text-align: center;
+    .remain-coin,.vip-user {
+      padding: 0.4rem 0;
+      font-size: @fz16;
+      span {
+        color: @tag-color;
+      }
+      &.no-padding {
+        padding: 0 0 0.4rem;
+        font-size: @fz14;
+        span {
+          color: #666;
+        }
+      }
+    }
+    .vip-user {
+      padding-bottom: 0.2rem;
+      img {
+        width: 0.32rem;
+      }
+    }
+    .item {
+      min-height: 3.0rem;
+      text-align: left;
+      font-size: 0;
+      li {
+        position: relative;
+        display: inline-block;
+        margin: 0 0.26rem 0.3rem 0;
+        width: 3.248rem;
+        height: 2.133333rem;
+        border: 1px solid @border-color;
+        border-radius: 0.133333rem;
+        text-align: center;
+        &:nth-child(2n+2) {
+          margin-right: 0;
+          vertical-align: top;
+        }
+        .money {
+          padding: 0.32rem 0.3rem 0.2rem;
+          font-size: @fz18;
+        }
+        .vip-money {
+          font-size: @fz16;
+        }
+        .coin {
+          font-size: @fz14;
+        }
+        .info {
+          font-size: @fz12;
+          color: #999;
+        }
+        .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 0.766667rem;
+          height: auto;
+        }
+        .vip-icon {
+          width: 0.32rem;
+          padding-right: 0.08rem;
+        }
+        &.active {
+          border: 1px solid @title-color;
+          color: @title-color;
+          .coin,
+          .info {
+            color: @title-color;
+          }
+        }
+      }
+    }
+    .weui-btn_primary:not(.weui-btn_disabled):active {
+      background: @search-color;
+    }
+    .weui-btn_primary {
+      height: 0.8rem;
+      margin-top: 0.3rem;
+      background: @search-color;
+      font-size:  0.32rem;
+    }
+    .pay-info {
+      padding-bottom: 0.2rem;
+      text-align: left;
+      .title {
+        padding: 0.32rem 0 0.24rem;
+        font-size: 0.3rem;
+      }
+      .info {
+        color: #999;
+        font-size: @fz14;
+      }
+    }
+  }
+}

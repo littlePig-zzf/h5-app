@@ -1,0 +1,57 @@
+.expend img {
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    transform: scale(1.6);
+}
+
+.income img {
+    height: 100%;
+}
+
+.transaction {
+    // height: 100vh;
+    // background: #fff;
+    .item {
+      padding: 0 0.293333rem 0 0.506667rem;
+      border-bottom: 1px solid @border-color;
+      background: #fff;
+      overflow: hidden;
+      .user-info {
+        display: table;
+        padding: 9px 0;
+        float: left;
+        dd {
+          position: relative;
+          width: 1.2rem;
+          height: 1.2rem;
+          margin-right: 8px;
+          border-radius: 100%;
+          background: #eee;
+          overflow: hidden;
+          img {
+            // height: 100%;
+            border-radius: 100%;
+          }
+        }
+        dt {
+          display: table-cell;
+          vertical-align: middle;
+          .type {
+            font-size: 0.3rem;
+          }
+          .time {
+            margin-top: 4px;
+            color: #999;
+            font-size: @fz12;
+          }
+        }
+      }
+      .right-txt {
+        margin: 26px 10px 0 0;
+        float: right;
+        font-size: @fz16;
+        color: @tag-color;
+      }
+    }
+}

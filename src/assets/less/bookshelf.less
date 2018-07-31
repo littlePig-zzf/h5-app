@@ -1,0 +1,154 @@
+.bookshelf {
+  // background: #fff;
+  .weui-icon-success,
+  .weui-icon-circle {
+    font-size: 0.4rem;
+  }
+  .vux-check-icon > .weui-icon-success:before,
+  .vux-check-icon > .weui-icon-success-circle:before,
+  .weui-icon-success {
+    color: @search-color;
+  }
+  .edit-icon {
+    position: absolute;
+    top: 0.24rem;
+    right: 0.48rem;
+    color: #fff;
+    z-index: 10;
+    cursor: pointer;
+    font-size: @fz14;
+    i {
+      width: 0.4rem;
+      padding-left: 0.06rem;
+      font-size: 0.32rem;
+      vertical-align: middle;
+    }
+    span {
+      display: inline-block;
+      margin-top: 0.03rem;
+      vertical-align: top;
+      color: #fff;
+    }
+    svg {
+      width: 0.46rem;
+      height: 0.46rem;
+      border-radius: 100%;
+      vertical-align: middle;
+    }
+    .edit {
+      width: 0.4rem;
+      padding-left: 0.06rem;
+    }
+  }
+  .list {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    .item {
+      position: relative;
+      padding: 0.266667rem;
+      border-bottom: 1px solid @border-color;
+      overflow: hidden;
+      width: max-content;
+      font-size: 0;
+      li {
+        display: inline-block;
+        .title {
+          width: 3.1rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 0.3rem;
+          color: @primary-color;
+        }
+        .info {
+          padding: 0.1rem 0;
+          margin-bottom: 0.5rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: @fz14;
+          color: #999;
+        }
+        .num {
+          position: absolute;
+          right: 0.2667rem;
+          top: 0.31rem;
+          font-size: @fz14;
+          color: #999;
+        }
+        .continue {
+          position: absolute;
+          bottom: 0.266667rem;
+          display: inline-block;
+          padding: 0 10px;
+          margin-top: 0.1rem;
+          border-radius: 10px;
+          border: 1px solid @search-color;
+          color: @search-color;
+          font-size: @fz12;
+        }
+        &.poster {
+          width: 1.9rem;
+          margin-right: 0.16rem;
+          margin-left: 0;
+          margin-top: 0.12rem;
+          min-height: 1.4rem;
+          vertical-align: middle;
+          transition: all .3s linear;
+          img {
+            min-height: 1.4rem;
+          }
+          // background: #eee;
+        }
+        &.show-check {
+          margin-left: 0;
+        }
+        &:first-child {
+          padding-right: 0.133333rem;
+          // margin-top: 1.2rem;
+          margin-top: -0.15rem;
+          vertical-align: middle;
+        }
+        &:last-child {
+          width: 4.9rem;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    height: 0.88rem;
+    width: 100%;
+    background: #fff;
+    font-size: 0;
+    transition: all .3s linear;
+    p {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      line-height: 0.88rem;
+      font-size: 0.3rem;
+      text-align: center;
+      color: @primary-color;
+      border-top: 1px solid @border-color;
+      box-sizing: border-box;
+      &:first-child {
+        border-right: 1px solid @border-color;
+      }
+      span {
+        vertical-align: middle;
+      }
+      .delete {
+        font-size: 0.32rem;
+        padding-right: 0.1rem;
+        color: #C9C9C9;
+      }
+    }
+    &.offset-top {
+      bottom: 0.95rem;
+    }
+  }
+}
