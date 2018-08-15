@@ -1,7 +1,7 @@
-export function back () {
+export function back() {
   if (window.history.length > 1) {
-    return this.$router.back()
+    return this.$router.back();
   }
 
-  this.$router.push(`/home`)
+  this.$router.push(`/home`);
 }

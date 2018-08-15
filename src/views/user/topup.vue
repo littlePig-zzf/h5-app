@@ -102,7 +102,7 @@ export default {
       }
 
       const selectedTopup = this.topup[this.selectedIndex];
-      return selectedTopup ? selectedTopup["id"] : 0;
+      return selectedTopup["id"] || 0;
     },
 
     token() {
