@@ -1,6 +1,7 @@
 import client from './client'
 
 export const BASE_URL = 'https://test-manhua.alaskamob.com'
+// export const BASE_URL = 'https://comic.alaskamob.com'
 export const API_URL = BASE_URL + '/1/api/v1/'
 
 const apiClicent = client(API_URL)
