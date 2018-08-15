@@ -1,0 +1,124 @@
+.user-module {
+  padding-bottom: 0;
+  min-height: 100vh;
+  background: #f5f5f5;
+  .weui-dialog {
+    background: url('/images/sign.png') no-repeat 0 0;
+    background-size: 100%;
+  }
+  .head-item {
+    padding: 0 0.3rem 0 0.36rem;
+    margin-bottom: 12px;
+    background: #fff;
+    overflow: hidden;
+    .head-img {
+      display: table;
+      padding: 9px 0;
+      float: left;
+      dd {
+        width: 75px;
+        height: 75px;
+        margin-right: 8px;
+        border-radius: 100%;
+        background: #eee;
+        img {
+          border-radius: 50%;
+          height: 100%;
+        }
+      }
+      dt {
+        display: table-cell;
+        vertical-align: middle;
+        .vip-icon {
+            width: 0.32rem;
+            padding-left: 5px;
+        }
+      }
+      .username {
+        padding-bottom: 0.05rem;
+        font-size: @fz16;
+        color: @primary-color;
+      }
+      .coin-num {
+        color: @theme-color;
+        font-size: @fz12;
+        img {
+            width: 0.38rem;
+            vertical-align: top;
+        }
+      }
+    }
+    .sign {
+      padding: 2px 8px;
+      margin: 34px 22px 0 0;
+      float: right;
+      font-size: @fz14;
+      color: #fff;
+      background: @theme-color;
+      border-radius: 10px;
+      &.grey-color {
+        background: #999;
+      }
+    }
+  }
+  .user-operate {
+    li {
+      padding: 0 0.3rem 0 0.36rem;
+      height: 1rem;
+      line-height: 0.95rem;
+      font-size: 0.3rem;
+      border-bottom: 1px solid @border-color;
+      background: #fff;
+      img {
+        width: 23px;
+        box-sizing: border-box;
+        padding-right: 0.066667rem;
+        vertical-align: middle;
+      }
+      span {
+        vertical-align: middle;
+      }
+      .icon {
+        margin-top: 0.3rem;
+        float: right;
+        fill: #999;
+      }
+      &:last-child {
+        margin-top: 12px;
+      }
+      .switch-btn {
+        float: right;
+      }
+    }
+  }
+  .dialog-cont {
+    padding: 0.4rem 0;
+    margin-top: 2.4rem;
+    p {
+      margin-bottom: 0.266667rem;
+      color: #685fa1;
+      font-size: 0.3rem;
+      .coin-num {
+        color: @search-color;
+      }
+    }
+  }
+  .vux-x-switch.weui-cell_switch {
+    padding-bottom: 0;
+    padding-top: 10px;
+  }
+  .weui-switch:before, .weui-switch-cp__box:before {
+    width: 46px;
+  }
+  .weui-switch:before, .weui-switch-cp__box:before,
+  .weui-switch, .weui-switch-cp__box {
+    height: 26px;
+  }
+  .weui-switch, .weui-switch-cp__box {
+    width: 48px;
+  }
+  .weui-switch:after, .weui-switch-cp__box:after {
+    width: 24px;
+    height: 24px;
+  }
+}

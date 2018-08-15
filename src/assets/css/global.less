@@ -1,0 +1,91 @@
+@import './reset.less';
+
+// 动画
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.2) rotate(3deg);
+    transform: scale(1.2) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.2) rotate(-3deg);
+    transform: scale(1.2) rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+@keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    -ms-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.2) rotate(3deg);
+    -ms-transform: scale(1.2) rotate(3deg);
+    transform: scale(1.2) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.2) rotate(-3deg);
+    -ms-transform: scale(1.2) rotate(-3deg);
+    transform: scale(1.2) rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+.container {
+  padding-bottom: 63px;
+}
+.box-padding {
+  padding: 0 0.3rem;
+}
+
+.vux-loading {
+    font-size: 12px;
+}
+.vux-toast {
+    font-size: 14px;
+}
+
+.vux-alert {
+  .weui-dialog__hd {
+    padding: 0.5em 1em 0.5em;
+  }
+}
+.weui-mask {
+  background: rgba(0,0,0,.8)
+}

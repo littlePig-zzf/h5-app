@@ -1,0 +1,157 @@
+.home {
+  font-size: @fz14;
+  background: #fff;
+  .banner {
+    .vux-swiper {
+      height: 4.7rem !important;
+    }
+    .poster{
+      width: 100%;
+      height: 100%
+    }
+  }
+  .rank {
+    dl {
+      display: inline-block;
+      width: 20%;
+      text-align: center;
+      margin: 0.4rem 0;
+      color: @primary-color;
+      font-weight: bold;
+      dd>img {
+        width: 0.9rem;
+      }
+    }
+  }
+  .section {
+    .section-item {
+      margin-bottom: 0.666667rem;
+      .head-box {
+        width: 100%;
+        margin: 0.226667rem 0 0.293333rem;
+        .free-item {
+          display: inline-block;
+          padding-left: 0.133333rem;
+          border-left: 2px solid @title-color;
+          color: @title-color;
+          font-size: 0.34rem;
+        }
+      }
+      .more-btn {
+        display: inline-block;
+        float: right;
+        padding: 0 0.133333rem;
+        margin-top: 0.04rem;
+        border-radius: 12px;
+        border: 1px solid #f49146;
+        font-size: @fz11;
+        color: #f49146;
+      }
+      .comic-item {
+        padding: 0.186667rem 0;
+        padding-bottom: 0;
+        li {
+          display: inline-block;
+          width: 3.35rem;
+          margin-right: 0.16rem;
+          margin-bottom: 0.266667rem;
+          &:nth-child(2n + 2) {
+            margin-right: 0;
+          }
+          .poster {
+            width: 100%;
+            min-height: 1.6rem;
+            background: #eee;
+          }
+          .poster-title {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 0.3rem;
+          }
+          .poster-subtitle {
+            font-size: @fz11;
+            color: #999;
+          }
+        }
+      }
+    }
+    .all-comics {
+      margin-top: 0.453333rem;
+      margin-bottom: 0.2rem;
+      text-align: center;
+      vertical-align: bottom;
+      line-height: 32px;
+      i {
+        padding-right: 4px;
+        font-size: 20px;
+        vertical-align: middle;
+      }
+      span {
+        vertical-align: middle;
+        font-size: @fz14;
+      }
+      .weui-btn_plain-primary {
+        color: @title-color;
+        border: 1px solid @btn-border-color;
+      }
+    }
+  }
+  .vux-indicator {
+    height: 14px;
+    padding: 0 8px 0 3px;
+    line-height: 11px;
+    vertical-align: middle;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+  }
+  .weui-dialog {
+      background: transparent;
+  }
+  .activity-alert {
+    .close-icon {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      width: 0.5rem
+    }
+    .invite-btn {
+      position: absolute;
+      left: 20%;
+      bottom: 22%;
+      width: 3.44rem;
+      height: 0.88rem;
+    }
+    .invite-code {
+      position: absolute;
+      width: 2.7rem;
+      height: 2.7rem;
+      left: 50%;
+      top: 50%;
+      margin-left: -1.38rem;
+      margin-top: -1.2rem;
+    }
+    .center-code {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 30px;
+      height: 30px;
+      margin-left: -16px;
+      margin-top: -7px;
+    }
+  }
+  .invite-alert {
+    .weui-dialog {
+      height: 200px;
+      margin-right: -7px;
+      margin-top: 0;
+    }
+    .invite-img {
+      position: absolute;
+      top: 0.32rem;
+      right: 0;
+    }
+  }
+}
