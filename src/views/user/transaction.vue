@@ -57,15 +57,14 @@ export default {
       const {type: transactType} = this
       try {
         const {data, meta} = await this.$api.user.transaction[transactType](page)
-        if (page > 1) {
-          this.list = [...this.list, ...data]
-        } else {
-          this.list = data
-        }
+
+        this.list = page > 1 ? [...this.list, ...data] : data
 
         this.currentPage = page
         this.lastPage = meta.last_page
-      } catch (error) {}
+      } catch (error) {
+        console.log(error)
+      }
     },
 
     nextPage () {

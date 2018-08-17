@@ -20,6 +20,11 @@
           <dt>{{item.title}}</dt>
         </router-link>
       </div>
+
+      <x-button type="primary" @click.native="showModule">
+        自定义组件vue extend
+      </x-button>
+
       <div class="box-padding">
         <div class="section">
           <div class="section-item" v-for="(item, index) in sections" :key="index">
@@ -53,6 +58,7 @@
 <script>
 import { Swiper, XButton, SwiperItem } from 'vux'
 import TopBar from '@/components/TopBar.vue'
+import alertModuleMixin from '../mixins/alertModule'
 
 export default {
   name: 'home',
@@ -62,6 +68,8 @@ export default {
     XButton,
     TopBar,
   },
+
+  mixins: [alertModuleMixin],
 
   data () {
     return {
@@ -116,6 +124,13 @@ export default {
           return this.$router.replace({name: 'comic', params: {id: matched[1]}})
         }
       }
+    },
+    showDialogFun () {
+      console.log('63456345634')
+    },
+
+    showModule () {
+      this.createVm('what are you said', { showDialog: this.showDialogFun })
     },
   },
 }

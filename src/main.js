@@ -1,8 +1,8 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import Raven from 'raven-js'
-import RavenVue from 'raven-js/plugins/vue'
+// import Raven from 'raven-js'
+// import RavenVue from 'raven-js/plugins/vue'
 import { AlertPlugin, LoadingPlugin, ToastPlugin } from 'vux'
 import App from './App'
 import router from './router'
@@ -17,20 +17,20 @@ import { api } from './request/api'
 require('core-js/fn/object/assign')
 require('core-js/es6/promise')
 
-if (process.env.NODE_ENV === 'production' || process.argv.includes('-p')) {
-  Raven
-    .config('https://7557f5d2900e48c1b3546b17e4c0fc36@sentry.alaskamob.com/2', {
-      whitelistUrls: [
-        /comic\.alaskamob\.com/,
-      ],
-      ignoreErrors: [
-        'WeixinJSBridge is not defined',
-        "Can't find variable: WeixinJSBridge",
-      ],
-    })
-    .addPlugin(RavenVue, Vue)
-    .install()
-}
+// if (process.env.NODE_ENV === 'production' || process.argv.includes('-p')) {
+//   Raven
+//     .config('https://7557f5d2900e48c1b3546b17e4c0fc36@sentry.alaskamob.com/2', {
+//       whitelistUrls: [
+//         /comic\.alaskamob\.com/,
+//       ],
+//       ignoreErrors: [
+//         'WeixinJSBridge is not defined',
+//         "Can't find variable: WeixinJSBridge",
+//       ],
+//     })
+//     .addPlugin(RavenVue, Vue)
+//     .install()
+// }
 
 Vue.config.productionTip = false
 

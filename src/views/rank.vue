@@ -85,11 +85,8 @@ export default {
   methods: {
     async init () {
       const {name, params, query} = this.$route
-      if (name === 'recommend') {
-        await this.recommend(query.day || 0)
-      } else {
-        await this.rank(params.id || 1)
-      }
+
+      name === 'recommend' ? await this.recommend(query.day || 0) : await this.rank(params.id || 1)
 
       this.showButtonTab = true
     },
