@@ -130,7 +130,7 @@ export default {
     },
 
     showModule () {
-      this.createVm('what are you said', { showDialog: this.showDialogFun })
+      this.createVm('what are you said', true, { showDialog: this.showDialogFun })
     },
   },
 }

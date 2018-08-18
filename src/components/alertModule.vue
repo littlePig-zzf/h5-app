@@ -1,5 +1,5 @@
 <template>
-    <div class="dialog">
+    <div class="dialog" v-if="showToast">
         <x-dialog v-model="showToast" class="dialog-demo" hide-on-blur @on-hide="showDialog">
             <div style="padding:15px;">
                 {{ title }}
@@ -36,8 +36,21 @@ export default {
     console.log('mounted')
   },
 
+  beforeUpdate () {
+    console.log('update')
+
+    this.$destroy()
+  },
+
+  destroyed () {
+    this.$el.remove()
+  },
+
   methods: {
     showDialog () {
+      this.showToast = false
+      console.log('[][]')
+
       this.$emit('showDialogFun')
     },
   },
@@ -46,6 +59,6 @@ export default {
 
 <style lang="less">
 .dialog {
-    font-size: .16rem;
+  font-size: .16rem;
 }
 </style>

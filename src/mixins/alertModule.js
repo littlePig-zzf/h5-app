@@ -2,19 +2,24 @@ import alertModule from '@/components/alertModule'
 import Vue from 'vue'
 
 export default {
+  data () {
+    return {
+      $vm: '',
+    }
+  },
   methods: {
-    createVm (title = 'hello', option) {
+    createVm (title = 'hello', value, option) {
       const Alert = Vue.extend(alertModule)
-      const $vm = new Alert({
+      this.$vm = new Alert({
         el: document.createElement('div'),
         propsData: {
           title,
-          value: '',
+          value,
         },
       })
-      document.body.appendChild($vm.$el)
+      document.body.appendChild(this.$vm.$el)
 
-      $vm.$on('showDialogFun', () => {
+      this.$vm.$on('showDialogFun', () => {
         option.showDialog()
       })
     },
