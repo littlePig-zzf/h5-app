@@ -1,5 +1,5 @@
 <template>
-    <div class="dialog" v-if="showToast">
+    <div class="dialog">
         <x-dialog v-model="showToast" class="dialog-demo" hide-on-blur @on-hide="showDialog">
             <div style="padding:15px;">
                 {{ title }}
@@ -38,7 +38,6 @@ export default {
 
   beforeUpdate () {
     console.log('update')
-
     this.$destroy()
   },
 
