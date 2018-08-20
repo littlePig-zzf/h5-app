@@ -46,10 +46,8 @@ export default {
   },
 
   methods: {
-    showDialog () {
-      this.showToast = false
-      console.log('[][]')
-
+    showDialog () { // 被销毁之后该事件不被触发
+      // this.showToast = false
       this.$emit('showDialogFun')
     },
   },

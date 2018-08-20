@@ -78,6 +78,9 @@ export default {
       ranks: [],
       sections: [],
       showAll: false,
+      hashArr: [
+        {path: 'read-book', name: 'chapter'},
+        {path: 'book-introduce', name: 'comic'} ],
     }
   },
 
@@ -111,20 +114,17 @@ export default {
       }
 
       const re = /id=(\d+)/
-      if (hash.indexOf('read-book') > -1) {
-        const matched = hash.match(re)
-        if (matched) {
-          return this.$router.replace({name: 'chapter', params: {id: matched[1]}})
-        }
-      }
 
-      if (hash.indexOf('book-introduce') > -1) {
-        const matched = hash.match(re)
-        if (matched) {
-          return this.$router.replace({name: 'comic', params: {id: matched[1]}})
+      this.hashArr.forEach((item, index) => {
+        if (hash.indexOf(item.path) > -1) {
+          const matched = hash.match(re)
+          if (matched) {
+            return this.$router.replace({name: item.name, params: {id: matched[1]}})
+          }
         }
-      }
+      })
     },
+    // 销毁掉组件之后不会执行隐藏的回调函数
     showDialogFun () {
       console.log('63456345634')
     },

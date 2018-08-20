@@ -166,8 +166,7 @@ export default {
         const lastItem = list[list.length - 1]
         if (lastItem.comic_id !== this.comic.id) {
           // Comic ID 变动
-          this.list = []
-          this.list.push(data)
+          this.list = data
         } else {
           const i = findIndex(this.list, {id: data.id})
           if (i >= 0) {
@@ -175,8 +174,7 @@ export default {
             window.scrollTo(0, list[i].offsetTop || 0)
           } else if (!this.nextChapterId || this.nextChapterId !== data.id) {
             // 章节不连续, 重置列表
-            this.list = []
-            this.list.push(data)
+            this.list = data
           } else {
             this.list.push(data)
           }
