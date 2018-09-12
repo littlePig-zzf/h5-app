@@ -37,9 +37,7 @@ export default {
     }
   },
 
-  mounted() {
-    console.log("asdasdasd");
-  },
+  mounted() {},
 
   computed: {
     bottomIndex() {

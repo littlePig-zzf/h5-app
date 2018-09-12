@@ -11,6 +11,7 @@
         </swiper-item>
       </swiper>
     </div>
+    
     <template v-if="ranks && sections">
       <div class="rank">
         <router-link tag="dl" :to="`/rank/${index+1}`" v-for="(item, index) in ranks" :key="index">
