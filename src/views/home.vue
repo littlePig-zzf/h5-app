@@ -13,7 +13,7 @@
     </div>
     <template v-if="ranks && sections">
       <div class="rank">
-        <router-link tag="dl" :to="`/rank/${index+1}`" v-for="(item, index) in ranks" :key="index">
+        <router-link tag="dl" :to="`/rank/${index+1}`" v-for="(item, index) in ranks" :key="index" :style="{width: 100/ranks.length + '%'}">
           <dd>
             <img :src="`../../static/images/rank_${index+1}.png`" alt="">
           </dd>

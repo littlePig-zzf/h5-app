@@ -94,10 +94,12 @@ let webpackConfig = {
   }
 }
 
+const themePath = process.env.NODE_TYPE === 'movie' ? '../src/assets/less/theme_movie.less' : '../src/assets/less/theme.less'
+
 // 设置全局变量以及vux样式的修改
 let lessTheme = {
   name: 'less-theme',
-  path: path.resolve(__dirname, '../src/assets/less/theme.less')
+  path: path.resolve(__dirname, themePath)
 }
 
 module.exports = vuxLoader.merge(webpackConfig, {
