@@ -67,9 +67,7 @@ export default {
 
         this.currentPage = page;
         this.lastPage = meta.last_page;
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     },
 
     nextPage() {

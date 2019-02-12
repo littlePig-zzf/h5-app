@@ -98,7 +98,11 @@ export default {
           item.selected = false;
         });
 
-        this.list = page > 1 ? [...this.list, ...data] : data;
+        if (page > 1) {
+          this.list = [...this.list, ...data];
+        } else {
+          this.list = data;
+        }
 
         this.currentPage = page;
         this.lastPage = meta.last_page;

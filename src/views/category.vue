@@ -106,9 +106,7 @@ export default {
         // 最后一页处理
         this.currentPage = page;
         this.lastPage = meta.last_page;
-      } catch (error) {
-        console.log("[");
-      }
+      } catch (error) {}
     },
 
     nextPage() {
